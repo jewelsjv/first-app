@@ -16,6 +16,8 @@ gem 'bootstrap-sass', '~> 3.1.1'
 # Paperclip - easy file attachment
 gem "paperclip", "~> 4.1", github: 'thoughtbot/paperclip'
 
+gem "paperclip-dropbox", ">= 1.1.7"
+
 group :production do
 	gem 'pg'
 	gem 'rails_12factor'
@@ -42,6 +44,8 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+
+gem 'figaro', '~> 0.7.0'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
