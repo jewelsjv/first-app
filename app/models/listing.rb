@@ -15,5 +15,6 @@ class Listing < ActiveRecord::Base
 
 	# set up the relationship between listings and users
 	belongs_to :user
+	has_many :orders
 
 end

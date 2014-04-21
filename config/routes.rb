@@ -1,6 +1,11 @@
 Etsydemo::Application.routes.draw do
+
   devise_for :users
-  resources :listings
+  
+  #include listing id number in orders url
+  resources :listings do
+    resource :orders
+  end
 
   get "pages/about"
   get "pages/contact"
