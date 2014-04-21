@@ -4,7 +4,7 @@ Etsydemo::Application.routes.draw do
   
   #include listing id number in orders url
   resources :listings do
-    resource :orders
+    resources :orders, only: [:new, :create]
   end
 
   get "pages/about"
@@ -12,6 +12,8 @@ Etsydemo::Application.routes.draw do
 
   #adding a page that relates to listing
   get 'seller' => 'listings#seller'
+  get 'sales' => 'orders#sales'
+  get 'purchases' => 'orders#purchases'
 
   root 'listings#index'
   # The priority is based upon order of creation: first created -> highest priority.
